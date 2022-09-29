@@ -13,10 +13,7 @@ try:
     all
 except:
      def all(iterable):
-         for element in iterable:
-             if not element:
-                 return False
-         return True
+         return all(element for element in iterable)
 
 def matchCaseInsensitively(base):
     return lambda comp: comp.lower().startswith(base.lower())
